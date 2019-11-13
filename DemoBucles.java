@@ -1,17 +1,19 @@
+import java.util.Random;
 /**
- *    @author - 
+ *    @author - Sara López Vicente
  */
 public class DemoBucles
 {
     private final char ASTERISCO = '*';
     private final char ESPACIO = ' ';
-
+    private Random generador;
+    
     /**
      * Constructor  
      */
     public DemoBucles()
     {
-       
+       generador = new Random();
     }
 
     /**
@@ -26,9 +28,11 @@ public class DemoBucles
      *  Usa bucles while
      */
     public int mayorPotencia2(int numero) {
-        
-        return 0;
-
+        int potencia = 1;
+        while (potencia * 2 <= numero) {
+            potencia *= 2;            
+        }
+        return potencia;
     }
 
     /**
@@ -47,9 +51,14 @@ public class DemoBucles
      *  64 =    64
      */
     public void escribirSumaPotencias(int numero) {
-
-         
-
+        int n = mayorPotencia2(numero);
+        System.out.printf("%3d =", numero);
+        int acumulador = 0;
+        while (numero - acumulador != 0) {            
+            n = mayorPotencia2(numero - acumulador);
+            acumulador += n;
+            System.out.printf("%6d", n);        
+        }        
     }
 
     /**
@@ -64,7 +73,14 @@ public class DemoBucles
      * 
      */
     public void generarAleatorios(int n) {
-
+        int i = 1;
+        int aleatorio = generador.nextInt(256); //si sale 255 la primera vez, no se escribe.
+        while (i <= n && aleatorio != 255) {
+            escribirSumaPotencias(aleatorio);
+            aleatorio = generador.nextInt(256);
+            System.out.println();
+            i++;
+        }
        
 
     }

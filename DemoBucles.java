@@ -52,7 +52,7 @@ public class DemoBucles
      */
     public void escribirSumaPotencias(int numero) {
         int n = mayorPotencia2(numero);
-        System.out.printf("%3d =", numero);
+        System.out.printf("%6d =", numero);
         int acumulador = 0;
         while (numero - acumulador != 0) {            
             n = mayorPotencia2(numero - acumulador);
@@ -80,9 +80,7 @@ public class DemoBucles
             aleatorio = generador.nextInt(256);
             System.out.println();
             i++;
-        }
-       
-
+        }      
     }
 
     /**
@@ -93,7 +91,7 @@ public class DemoBucles
     public void escribirCaracter(int n, char caracter)
     {
          for (int i = 1; i <= n; i++) {
-             System.out.printf("%2c", caracter);
+             System.out.printf("%c", caracter);
             }
     }
 

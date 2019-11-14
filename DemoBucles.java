@@ -92,7 +92,9 @@ public class DemoBucles
      */
     public void escribirCaracter(int n, char caracter)
     {
-         
+         for (int i = 1; i <= n; i++) {
+             System.out.printf("%2c", caracter);
+            }
     }
 
     /**

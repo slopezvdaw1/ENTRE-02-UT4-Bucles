@@ -74,10 +74,11 @@ public class DemoBucles
      */
     public void generarAleatorios(int n) {
         int i = 1;
-        int aleatorio = generador.nextInt(256); //si sale 255 la primera vez, no se escribe.
+        int aleatorio = generador.nextInt(256);
+        escribirSumaPotencias(aleatorio);
         while (i <= n && aleatorio != 255) {
-            escribirSumaPotencias(aleatorio);
             aleatorio = generador.nextInt(256);
+            escribirSumaPotencias(aleatorio);
             System.out.println();
             i++;
         }      

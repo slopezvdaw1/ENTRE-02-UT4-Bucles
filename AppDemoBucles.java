@@ -25,7 +25,8 @@ public class AppDemoBucles
      */
     public static void main(String[] args)
     {
-         
+         Utilidades teclado = new Utilidades();
+         DemoBucles demo1 = new DemoBucles();
     }
 }
 

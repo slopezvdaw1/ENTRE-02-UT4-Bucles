@@ -105,9 +105,14 @@ public class DemoBucles
      */
     public  void mostrarEscalera(int escalones, int alto, int ancho) {
         System.out.println();
-
-         
-
+        //i = contador escalones; j = contador filas
+        for (int i = 0; i < escalones; i++) {
+            for (int j = 1; j <= alto; j++) {
+                escribirCaracter(ancho * i, ESPACIO);
+                escribirCaracter(ancho, ASTERISCO);
+                System.out.println();
+            }
+        }
     }
 
 }
